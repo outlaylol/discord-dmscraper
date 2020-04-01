@@ -14,7 +14,6 @@ async def on_message(message):
     
     if(message.content == ".scrape"):
         channels = client.private_channels
-        print(channels)
         for channel in channels:
             if isinstance(channel, discord.DMChannel):
                    file = open(f"{channel.recipient.id}.txt", "w+", encoding="utf-8")
